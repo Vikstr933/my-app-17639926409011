@@ -1,0 +1,270 @@
+.tax-breakdown-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+}
+
+.breakdown-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f1f5f9
+}
+
+.breakdown-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0
+}
+
+.breakdown-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0
+}
+
+.breakdown-chart {
+  margin-bottom: 2rem
+}
+
+.chart-bar {
+  display: flex;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
+}
+
+.chart-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative
+}
+
+.chart-segment:hover {
+  filter: brightness(1.1)
+}
+
+.chart-segment.municipal {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)
+}
+
+.chart-segment.state {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)
+}
+
+.chart-segment.net {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)
+}
+
+.segment-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+}
+
+.breakdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  transition: all 0.2s ease
+}
+
+.breakdown-item:hover {
+  background: #f1f5f9;
+  transform: translateX(4px)
+}
+
+.breakdown-item.total {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white
+}
+
+.breakdown-item.total:hover {
+  transform: translateX(4px) translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3)
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem
+}
+
+.item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  flex-shrink: 0
+}
+
+.item-icon.municipal {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)
+}
+
+.item-icon.state {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)
+}
+
+.item-icon.total {
+  background: rgba(255, 255, 255, 0.2)
+}
+
+.item-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white
+}
+
+.item-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0
+}
+
+.breakdown-item.total .item-info h3 {
+  color: white
+}
+
+.item-description {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0
+}
+
+.breakdown-item.total .item-description {
+  color: rgba(255, 255, 255, 0.9)
+}
+
+.item-values {
+  text-align: right
+}
+
+.item-amount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.25rem 0
+}
+
+.breakdown-item.total .item-amount {
+  color: white
+}
+
+.item-percentage {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0
+}
+
+.breakdown-item.total .item-percentage {
+  color: rgba(255, 255, 255, 0.9)
+}
+
+.breakdown-summary {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0
+}
+
+.summary-row:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0
+}
+
+.summary-row.total {
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  border-top: 2px solid #cbd5e1
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569
+}
+
+.summary-row.total .summary-label {
+  font-size: 1rem;
+  color: #1e293b
+}
+
+.summary-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b
+}
+
+.summary-value.negative {
+  color: #ef4444
+}
+
+.summary-row.total .summary-value {
+  font-size: 1.5rem;
+  color: #3b82f6
+}
+
+@media (max-width: 768px) {
+  .tax-breakdown-container {
+    padding: 1.5rem
+  }
+
+  .breakdown-header h2 {
+    font-size: 1.25rem
+  }
+
+  .chart-bar {
+    height: 48px
+  }
+
+  .segment-label {
+    font-size: 0.625rem
+  }
+
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem
+  }
+
+  .item-values {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  .item-amount {
+    font-size: 1.125rem
+  }
+
+  .summary-row.total .summary-value {
+    font-size: 1.25rem
+  }
+}
